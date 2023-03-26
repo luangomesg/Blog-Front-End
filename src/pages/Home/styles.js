@@ -6,16 +6,22 @@ export const Main = styled.main`
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
+  height: 100%;
+  align-items: center;
 `;
 
 export const ContainerPosts = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 200px;
+  grid-auto-rows: auto;
   gap: 20px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
+
+  @media (max-width: 630px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const Posts = styled.div`
@@ -36,7 +42,11 @@ export const P = styled.p`
 
 
   &.modal-autor {
-    color: #fff;
+    color: #f7b731;
+
+    span {
+        color: #fff;
+    }
 
   }
 
@@ -49,9 +59,14 @@ export const P = styled.p`
   &.corpo-title {
     margin-top: 20px;
     text-transform: capitalize;
-    font-size: 24px;
+    font-size: 18px;
     cursor: auto;
     color: #fff;
+    
+    @media (max-width: 450px) {
+    font-size: 13px;
+  }
+
   }
 
   &.corpo-comments {
@@ -60,6 +75,11 @@ export const P = styled.p`
     margin-left: 20px;
     cursor: auto;
     color: #fff;
+
+    @media (max-width: 450px) {
+    font-size: 10px;
+  }
+
 
     &::before {
       content: "";
@@ -77,6 +97,14 @@ export const H2 = styled.h2`
   text-transform: capitalize;
   color: #333;
   text-align: center;
+
+  @media (max-width: 1220px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 1050px) {
+    font-size: 15px;
+  }
 
   &.comentario {
     margin: 20px 0;
@@ -102,6 +130,10 @@ export const Header = styled.header`
 
   h1 {
     letter-spacing: 5px;
+    @media (max-width: 331px) {
+    font-size: 25px;
+    text-align: center;
+  }
   }
 `;
 
@@ -133,6 +165,7 @@ export const ContainerComments = styled.div`
   flex-direction: column;
   gap: 30px;
   padding: 5px;
+  
 
   div {
     border: 1px solid #fff;
@@ -157,6 +190,15 @@ export const Email = styled.p`
   margin-bottom: 5px;
   color: #fff;
   font-weight: bold;
+  word-wrap: break-word;
+
+  @media (max-width: 450px) {
+    font-size: 13px;
+  }
+
+  @media (max-width: 345px) {
+    font-size: 10px;
+  }
 
   &::before {
     content: "";
@@ -171,12 +213,14 @@ export const Email = styled.p`
 
 export const PersonPicture = styled.div`
   display: flex;
-  justify-content: center;
+  align-items: center;
   background-color: #6c757d;
   width: 100%;
-  height: 25%;
+  height: 100%;
+  max-height: 130px;
   border-radius: 10px;
   margin-bottom: 50px;
+  flex-direction: column;
 
   div {
     width: 80px;
@@ -197,6 +241,11 @@ export const PPerfil = styled.p`
   font-weight: bold;
   font-size: 20px;
   color: #fff;
+  word-wrap: break-word;
+
+  @media (max-width: 260px) {
+    font-size: 15px;
+  }
 `;
 
 export const Informations = styled.div`
@@ -211,9 +260,17 @@ export const Informations = styled.div`
     align-items: center;
     height: 100%;
     justify-content: center;
-
+    text-align: center;
+    margin-top: 30px;
     p {
         font-size: 20px;
+        border: 1px solid #fff;
+        padding: 5px;
+        word-break: break-word;
+
+        @media (max-width: 340px) {
+    font-size: 15px;
+  }
     }
   }
 `;

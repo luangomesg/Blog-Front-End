@@ -82,7 +82,7 @@ function Home() {
           backgroundColor: 'rgba(0, 0 ,0, 0.8)'
         },
         content: {
-          border: '1px solid green',
+          border: '2px solid #fff',
           background: '#2d4059',
           borderRadius: '20px',
           padding: '20px',
@@ -98,7 +98,7 @@ function Home() {
         <>
           <H2 className='modal-title'>{renderModal.title}</H2>
           <hr />
-          <P className='modal-autor' onClick={openTwoModal}>Autor: {names.find((name) => name.id === renderModal.userId).name}</P>
+          <P className='modal-autor' onClick={openTwoModal}><span>Autor: </span>{names.find((name) => name.id === renderModal.userId).name}</P>
           <P className='corpo-title'>{renderModal.body}</P>
           <H2 className='comentario'>COMENTÁRIOS:</H2>
           <ContainerComments>
@@ -138,8 +138,8 @@ function Home() {
         <PersonPicture>
           <div>
             <img alt='Person' src={person} />
-            <PPerfil>{names.find((name) => name.id === renderModal.userId).name}</PPerfil>
           </div>
+          <PPerfil>{names.find((name) => name.id === renderModal.userId).name}</PPerfil>
         </PersonPicture>
         <Informations>
           <div>
