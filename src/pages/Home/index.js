@@ -25,7 +25,6 @@ function Home() {
   }
 
   function openTwoModal() {
-    
     setmodalTwoOpen(true);
   }
 
@@ -136,7 +135,7 @@ function Home() {
         isOpen={modalTwoOpen}
         onRequestClose={closeTwoModal}
         contentLabel="Detalhes dos Posts"
-      ><CloseButton onClick={closeTwoModal}><img alt='Close-Modal' src={X} /></CloseButton>
+      >{renderModal &&(<><CloseButton onClick={closeTwoModal}><img alt='Close-Modal' src={X} /></CloseButton>
         <PersonPicture>
           <div>
             <img alt='Person' src={person} />
@@ -145,14 +144,16 @@ function Home() {
         </PersonPicture>
         <Informations>
           <div>
-            <p>Usuário: {names.find((name) => name.id === renderModal.userId).username}</p>
-            <p>Email: {names.find((name) => name.id === renderModal.userId).email}</p>
-            <p>Celular: {names.find((name) => name.id === renderModal.userId).phone}</p>
-            <p>Site: {names.find((name) => name.id === renderModal.userId).website}</p>
-            <p>Empresa: {names.find((name) => name.id === renderModal.userId).company.name}</p>
+            <p>Usuário: {names.find((names) => names.id === renderModal.userId).username}</p>
+            <p>Email: {names.find((names) => names.id === renderModal.userId).email}</p>
+            <p>Celular: {names.find((names) => names.id === renderModal.userId).phone}</p>
+            <p>Site: {names.find((names) => names.id === renderModal.userId).website}</p>
+            <p>Empresa: {names.find((names) => names.id === renderModal.userId).company.name}</p>
           </div>
 
         </Informations>
+        </>
+        )}
       </Modal>
     </Main>
   );
