@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/Blog-Front-End/static/js/main.f3c1dbc2.js",
+    "static/media/X.png": "/Blog-Front-End/static/media/X.d212129407f84a7e519a.png",
+    "static/media/profile.webp": "/Blog-Front-End/static/media/profile.7a6a6c54279a54d1977c.webp",
+    "index.html": "/Blog-Front-End/index.html",
+    "main.f3c1dbc2.js.map": "/Blog-Front-End/static/js/main.f3c1dbc2.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.f3c1dbc2.js"
+  ]
+}
